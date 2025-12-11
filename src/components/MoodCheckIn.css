@@ -1,0 +1,177 @@
+/* Mood Check-In Container */
+.mood-checkin {
+  width: 100%;
+}
+
+.mood-question {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Mood Grid */
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Mood Option Button */
+.mood-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 0.75rem;
+  background: #f9fafb;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.mood-option:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.mood-option.selected {
+  background: linear-gradient(135deg, #a78bfa 0%, #ec4899 100%);
+  border-color: #a78bfa;
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px -3px rgba(167, 139, 250, 0.4);
+}
+
+.mood-option.selected .mood-emoji {
+  transform: scale(1.2);
+}
+
+.mood-option.selected .mood-label {
+  color: white;
+  font-weight: 600;
+}
+
+/* Mood Emoji */
+.mood-emoji {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+/* Mood Label */
+.mood-label {
+  font-size: 0.875rem;
+  color: #4b5563;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Input Container */
+.mood-input-container {
+  margin-bottom: 1.5rem;
+}
+
+.mood-input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.75rem;
+  outline: none;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  background: #f9fafb;
+}
+
+.mood-input:focus {
+  border-color: #a78bfa;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.1);
+}
+
+.mood-input::placeholder {
+  color: #9ca3af;
+}
+
+/* Submit Button */
+.mood-submit {
+  width: 100%;
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #a78bfa 0%, #ec4899 100%);
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  box-shadow: 0 4px 6px -1px rgba(167, 139, 250, 0.3);
+}
+
+.mood-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(167, 139, 250, 0.4);
+}
+
+.mood-submit:active {
+  transform: translateY(0);
+}
+
+.mood-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.mood-submit.loading {
+  background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+  .mood-question {
+    font-size: 1.25rem;
+  }
+
+  .mood-grid {
+    gap: 1.25rem;
+  }
+
+  .mood-option {
+    padding: 1.5rem 1rem;
+  }
+
+  .mood-emoji {
+    font-size: 2.5rem;
+  }
+
+  .mood-label {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mood-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .mood-option {
+    padding: 1rem 0.5rem;
+  }
+
+  .mood-emoji {
+    font-size: 1.75rem;
+  }
+
+  .mood-label {
+    font-size: 0.75rem;
+  }
+}
